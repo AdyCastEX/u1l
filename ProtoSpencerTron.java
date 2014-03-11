@@ -5,10 +5,11 @@ import robocode.*;
 // API help : http://robocode.sourceforge.net/docs/robocode/robocode/Robot.html
 
 /**
- * ProtoSpencerTron - a robot by (your name here)
+ * ProtoSpencerTron - a robot by Carl Adrian P. Castueras and Mary Aracelli S. Basbas
  */
-public class ProtoSpencerTron extends Robot
+public class ProtoSpencerTron extends AdvancedRobot
 {
+	private EnemyBot enemy = new EnemyBot();
 	/**
 	 * run: ProtoSpencerTron's default behavior
 	 */
@@ -20,6 +21,7 @@ public class ProtoSpencerTron extends Robot
 
 		// setColors(Color.red,Color.blue,Color.green); // body,gun,radar
 
+		enemy.reset();
 		// Robot main loop
 		while(true) {
 			// Replace the next 4 lines with any behavior you would like
@@ -27,6 +29,7 @@ public class ProtoSpencerTron extends Robot
 			turnGunRight(360);
 			back(100);
 			turnGunRight(360);
+			//doMove();
 		}
 	}
 
@@ -35,7 +38,8 @@ public class ProtoSpencerTron extends Robot
 	 */
 	public void onScannedRobot(ScannedRobotEvent e) {
 		// Replace the next line with any behavior you would like
-		fire(3);
+		fire(1);
+
 	}
 
 	/**
@@ -53,4 +57,11 @@ public class ProtoSpencerTron extends Robot
 		// Replace the next line with any behavior you would like
 		back(20);
 	}	
+	
+	public void doMove(){
+		setTurnRight(enemy.getBearing()+90);
+		if(getTime() % 20 == 0){
+			ahead(150);
+		}
+	}
 }
