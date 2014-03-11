@@ -1,4 +1,5 @@
 package u1l;
+import robocode.ScannedRobotEvent;
 /**
  * MyClass - a class by (your name here)
  */
@@ -13,7 +14,7 @@ public class EnemyBot
 	
 	public EnemyBot()
 	{
-
+		reset();
 	}
 	
 	public void reset()
@@ -34,6 +35,12 @@ public class EnemyBot
 		this.heading = e.getHeading();
 		this.velocity = e.getVelocity();
 		this.name = e.getName();
+	}
+	
+	public boolean none()
+	{
+		if(this.name.equals("")) return true;
+		else return false;
 	}
 
 	//getter-setter section start
