@@ -30,7 +30,14 @@ public class ProtoSpencerTron extends AdvancedRobot
 		setRadarColor(Color.white);
 		setBulletColor(Color.cyan);
 		setScanColor(Color.cyan);		
-		
+		//test
+		//test2
+		//test3
+		//test4
+		//test5
+		//test6
+		//test7
+		//test8
 		addCustomEvent(new Condition("too_close_to_walls"){
 					public boolean test(){
 						return(
