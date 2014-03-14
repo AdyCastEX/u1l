@@ -30,11 +30,7 @@ public class ProtoSpencerTron extends AdvancedRobot
 		setRadarColor(Color.white);
 		setBulletColor(Color.cyan);
 		setScanColor(Color.cyan);		
-		//test
-		//test
-		//test
-		//test
-		//test
+		
 		addCustomEvent(new Condition("too_close_to_walls"){
 					public boolean test(){
 						return(
@@ -122,7 +118,7 @@ public class ProtoSpencerTron extends AdvancedRobot
 		
 	}	
 	
-	public void onCustomEvent(CustomEvent e)
+	/*public void onCustomEvent(CustomEvent e)
 	{
 		if(e.getCondition().getName().equals("too_close_to_walls")){
 			if(tooCloseToWall <= 0){
@@ -130,11 +126,7 @@ public class ProtoSpencerTron extends AdvancedRobot
 				setMaxVelocity(0);
 			}
 		}
-	}
-	//test
-	//test
-	//test
-	//test
-	//test
+	}*/
+
 	
 }
