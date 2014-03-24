@@ -36,7 +36,7 @@ public class SpencerTron extends AdvancedRobot
 	 */
 
 	/**
-	 * run: ProtoSpencerTronV4's default behavior
+	 * run: SpencerTron's default behavior
 	 */
 	public void run() {
 		
